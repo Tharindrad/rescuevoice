@@ -19,7 +19,7 @@ function VoiceSession({ applicationId, applicant, language, onClose }: Props) {
   const { startSession, endSession } = useConversationControls()
   const { status } = useConversationStatus()
   const conversation = useConversation({
-    onError: (error) => setError(error instanceof Error ? error.message : String(error)),
+    onError: (error) => setError(String(error)),
   })
   const [error, setError] = useState('')
   const [starting, setStarting] = useState(false)
