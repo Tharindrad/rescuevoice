@@ -1,0 +1,2 @@
+import {useState} from 'react';import {Sidebar} from './components/Sidebar';import {Dashboard} from './pages/Dashboard'
+export default function App(){const [active,setActive]=useState('Overview');return <div className="flex min-h-screen bg-[#f5f6f8]"><Sidebar active={active} setActive={setActive}/>{active==='Overview'?<Dashboard/>:<main className="p-8"><h1 className="text-2xl font-bold">{active}</h1><p className="text-zinc-500 mt-2">Module ready for Phase 2 API integration.</p></main>}</div>}

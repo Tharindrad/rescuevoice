@@ -1,0 +1,40 @@
+{
+  "tools": [
+    {
+      "name": "get_application",
+      "description": "Retrieve the minimum approved application context for a submitted application.",
+      "method": "GET",
+      "path": "/api/applications/{application_id}"
+    },
+    {
+      "name": "get_application_issue",
+      "description": "Retrieve the recorded correctable issue for a submitted application.",
+      "method": "GET",
+      "path": "/api/applications/{application_id}/issue"
+    },
+    {
+      "name": "submit_correction",
+      "description": "Submit an explicitly consented, policy-allowed correction through the RescueVoice Harness.",
+      "method": "POST",
+      "path": "/api/actions/execute",
+      "body": {
+        "application_id": "APP-004281",
+        "action": "upload_corrected_passport",
+        "consent": true,
+        "idempotency_key": "unique-request-key"
+      }
+    },
+    {
+      "name": "book_appointment",
+      "description": "Book an appointment when the application issue requires in-person attendance and policy allows booking.",
+      "method": "POST",
+      "path": "/api/actions/execute",
+      "body": {
+        "application_id": "APP-004282",
+        "action": "book_appointment",
+        "consent": true,
+        "idempotency_key": "unique-request-key"
+      }
+    }
+  ]
+}

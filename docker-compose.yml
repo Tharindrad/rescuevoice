@@ -1,0 +1,12 @@
+services:
+  api:
+    build: ./backend
+    ports: ["8000:8000"]
+    environment:
+      RESCUEVOICE_ENV: demo
+  frontend:
+    image: node:22-alpine
+    working_dir: /app
+    volumes: [".:/app"]
+    ports: ["5173:5173"]
+    command: sh -c "npm install && npm run dev -- --host 0.0.0.0"

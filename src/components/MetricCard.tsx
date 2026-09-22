@@ -1,0 +1,1 @@
+export function MetricCard({value,label}:{value:string;label:string}){return <div className="bg-white border border-zinc-200 rounded-2xl p-5"><div className="text-3xl font-bold tracking-tight">{value}</div><div className="text-xs text-zinc-500 mt-1">{label}</div></div>}

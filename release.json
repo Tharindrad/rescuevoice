@@ -1,0 +1,12 @@
+{
+  "project": "RescueVoice",
+  "release": "PH16",
+  "version": "1.2.0-demo",
+  "track": "Government Services \u2014 Proactive Application Resolution",
+  "primary_case": "APP-004281",
+  "escalation_case": "APP-004283",
+  "ph15_adversarial_scenarios": 13,
+  "ph15_adversarial_pass_rate": 100,
+  "external_live_call_required_for_core_evaluation": false,
+  "human_final_decision": true
+}
